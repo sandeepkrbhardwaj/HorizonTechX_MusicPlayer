@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Wax — Glass Turntable Music Player</title>
+<meta name="description" content="Wax is a glassmorphism music player with a spinning vinyl turntable, playlist, favorites and full keyboard control." />
+
+<!-- Fonts: Sora (display) · Inter (body) · JetBrains Mono (data) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css" />
+</head>
+<body data-theme="dark">
+
+<!-- ===== Loading animation ===== -->
+<div class="loader" id="loader" aria-hidden="true">
+  <div class="loader-disc"></div>
+  <p>tuning in…</p>
+</div>
+
+<div class="bg-glow" aria-hidden="true"></div>
+
+<!-- ===== Top bar ===== -->
+<header class="topbar">
+  <div class="brand">
+    <span class="brand-mark">PULSE</span>
+    <span class="brand-name">PLAYER</span>
+  </div>
+  <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle light and dark mode" title="Toggle theme">
+    <svg class="icon sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><g stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="2" x2="12" y2="5"/><line x1="12" y1="19" x2="12" y2="22"/><line x1="2" y1="12" x2="5" y2="12"/><line x1="19" y1="12" x2="22" y2="12"/><line x1="4.2" y1="4.2" x2="6.3" y2="6.3"/><line x1="17.7" y1="17.7" x2="19.8" y2="19.8"/><line x1="4.2" y1="19.8" x2="6.3" y2="17.7"/><line x1="17.7" y1="6.3" x2="19.8" y2="4.2"/></g></svg>
+    <svg class="icon moon" viewBox="0 0 24 24"><path d="M21 12.5A8.5 8.5 0 1 1 11.5 3a7 7 0 0 0 9.5 9.5Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+  </button>
+</header>
+
+<main class="layout">
+
+  <!-- ===== Player column ===== -->
+  <section class="player-card" aria-label="Now playing">
+
+    <!-- Turntable -->
+    <div class="turntable">
+      <div class="platter">
+        <div class="vinyl" id="vinyl">
+          <img id="albumArt" src="" alt="Album cover" />
+          <div class="vinyl-grooves"></div>
+          <div class="vinyl-label"></div>
+          <div class="vinyl-hole"></div>
+        </div>
+      </div>
+      <div class="tonearm" id="tonearm">
+        <div class="tonearm-base"></div>
+        <div class="tonearm-rod"></div>
+        <div class="tonearm-head"></div>
+      </div>
+    </div>
+
+    <!-- Track info -->
+    <div class="track-info">
+      <h1 id="songTitle">—</h1>
+      <p id="songArtist">—</p>
+    </div>
+
+    <!-- Progress -->
+    <div class="progress-row">
+      <span class="time" id="currentTime">0:00</span>
+      <input type="range" id="seekBar" class="seek-bar" min="0" max="100" value="0" step="0.1" aria-label="Seek" />
+      <span class="time" id="durationTime">0:00</span>
+    </div>
+
+    <!-- Transport controls -->
+    <div class="controls">
+      <button class="ctrl-btn" id="shuffleBtn" type="button" aria-label="Shuffle" title="Shuffle (S)">
+        <svg viewBox="0 0 24 24"><path d="M16 3h5v5M4 20L21 3M21 16v5h-5M4 4l5 5M9 15l-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <button class="ctrl-btn" id="prevBtn" type="button" aria-label="Previous track" title="Previous (←)">
+        <svg viewBox="0 0 24 24"><path d="M19 20L9 12l10-8v16ZM5 19V5" fill="currentColor"/></svg>
+      </button>
+      <button class="ctrl-btn play-btn" id="playBtn" type="button" aria-label="Play" title="Play / Pause (Space)">
+        <svg class="icon-play" viewBox="0 0 24 24"><path d="M8 5v14l12-7z" fill="currentColor"/></svg>
+        <svg class="icon-pause" viewBox="0 0 24 24" hidden><path d="M7 5h4v14H7zM13 5h4v14h-4z" fill="currentColor"/></svg>
+      </button>
+      <button class="ctrl-btn" id="nextBtn" type="button" aria-label="Next track" title="Next (→)">
+        <svg viewBox="0 0 24 24"><path d="M5 4l10 8-10 8V4ZM19 5v14" fill="currentColor"/></svg>
+      </button>
+      <button class="ctrl-btn" id="repeatBtn" type="button" aria-label="Repeat" title="Repeat (R)">
+        <svg viewBox="0 0 24 24"><path d="M17 2l4 4-4 4M3 12V8a4 4 0 0 1 4-4h14M7 22l-4-4 4-4M21 12v4a4 4 0 0 1-4 4H3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span class="repeat-one-dot" id="repeatOneDot" hidden>1</span>
+      </button>
+    </div>
+
+    <!-- Volume + favorite -->
+    <div class="lower-row">
+      <button class="fav-btn" id="favBtn" type="button" aria-label="Add to favorites" title="Favorite (L)">
+        <svg viewBox="0 0 24 24"><path d="M12 21s-7.5-4.9-10.2-9.3C.2 8.6 1.6 5 5.1 5c2 0 3.4 1.1 4.1 2.2C9.9 6.1 11.3 5 13.3 5c3.5 0 4.9 3.6 3.3 6.7C19 16.1 12 21 12 21z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+      </button>
+      <div class="volume-row">
+        <svg viewBox="0 0 24 24" class="icon vol-icon"><path d="M4 9v6h4l5 4V5L8 9H4Z" fill="currentColor"/><path id="volWave" d="M16.5 8.5a5 5 0 0 1 0 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <input type="range" id="volumeBar" class="volume-bar" min="0" max="100" value="80" aria-label="Volume" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Playlist column ===== -->
+  <section class="playlist-card" aria-label="Playlist">
+    <div class="playlist-head">
+      <h2>Playlist</h2>
+      <div class="search-field">
+        <svg viewBox="0 0 24 24" class="icon"><path d="M21 21l-4.35-4.35M11 19a8 8 0 1 1 0-16 8 8 0 0 1 0 16Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <input type="text" id="searchInput" placeholder="Search songs or artists…" autocomplete="off" />
+      </div>
+    </div>
+    <div class="playlist-tabs">
+      <button class="tab active" data-tab="all" type="button">All Songs</button>
+      <button class="tab" data-tab="favorites" type="button">Favorites</button>
+    </div>
+    <ul class="track-list" id="trackList"></ul>
+  </section>
+</main>
+
+<!-- ===== Portfolio sections ===== -->
+<section class="about-section">
+  <div class="about-inner">
+    <span class="eyebrow"><h2>Project Description</h2></span>
+    <h2>More Than a Music Player.</h2>
+    <p class="tagline">
+A feature-rich music player showcasing modern frontend development and interactive user experiences.
+</p>
+
+<p>
+Pulse Player is a modern music player built using HTML, CSS, and JavaScript. Designed with a premium glassmorphism interface, it delivers a smooth and interactive listening experience through features such as playlist management, favorites, real-time search, shuffle and repeat controls, keyboard shortcuts, theme switching, and responsive design.
+</p>
+  </div>
+</section>
+
+<section class="features-section">
+  <div class="features-inner">
+    <span class="eyebrow"><h2>Feature Highlights</h2></span>
+    <h2>Everything a player needs, nothing it doesn't.</h2>
+    <div class="feature-grid">
+ <div class="feature-card">
+      <h3>📱 Fully Responsive</h3>
+       <p>Optimized for mobile, tablet and desktop devices.</p>
+    </div>
+    
+
+<div class="feature-card">
+    <h3>💖 Favorites Collection</h3>
+    <p>Save your most-loved devotional tracks and access them instantly anytime.</p>
+</div>
+
+<div class="feature-card">
+    <h3>🔍 Smart Search</h3>
+    <p>Quickly find songs, artists and bhajans with real-time search functionality.</p>
+</div>
+
+<div class="feature-card">
+    <h3>🎚️ Music Controls</h3>
+    <p>Play, pause, skip, seek, shuffle and repeat songs with smooth controls.</p>
+</div>
+
+<div class="feature-card">
+    <h3>🌙 Dark & Light Mode</h3>
+    <p>Switch between elegant dark and light themes for a personalized experience.</p>
+</div>
+
+<div class="feature-card">
+    <h3>⌨️ Keyboard Shortcuts</h3>
+    <p>Control music instantly using keyboard shortcuts for a faster experience.</p>
+</div>
+  </div>
+  </div>
+</section>
+
+<!-- toast for favorites / playback feedback -->
+<div class="toast" id="toast"></div>
+
+<footer class="site-footer">
+  <p>A Modern Music Player built with HTML, CSS & JavaScript &amp; JavaScript.</p>
+  <p class="credits">Designed &amp; developed by <strong>Sandeep Kumar Bhardwaj</strong></p>
+  <p class="credits">Frontend Developer | <strong>B.Tech CSE (AIML)</strong></p>
+</footer>
+
+<audio id="audio" preload="metadata"></audio>
+
+<script src="script.js"></script>
+</body>
+</html>
