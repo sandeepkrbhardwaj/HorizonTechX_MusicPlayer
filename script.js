@@ -13,70 +13,279 @@
      song gets a unique, stable piece of "album art".
   --------------------------------------------------------------- */
   const SONGS = [
-  {
-    id: 1,
-    title: "Aarambh Hai Prachand",
-    artist: "Piyush Mishra",
-    duration: "4:58",
-    src: "songs/आरंभ है प्रचंड बोले मस्तको के झुंड _ Aarambh hai Prachand _ Full Song _ with हिन्दी(M4A_1.m4a",
-    cover: "images/ram1.jpg"
-  },
-  {
-    id: 2,
-    title: "Mhara Ujjain Ka Maharaja",
-    artist: "Bhajan",
-    duration: "6:40",
-    src: "songs/खम्मा रे खम्मा _ Mhara Ujjain Ka Maharaja Ne Khamma Re Khamma _  Nitin bagwan(M4A_128K).m4a",
-    cover:"images/ram2.jpg"
-  },
-  {
-    id: 3,
-    title: "Govind Tumhare Charno Mein",
-    artist: "Bhajan",
-    duration: "6:12",
-    src: "songs/गोविंद तुम्हारे चरणों में एक प्रेम पुजारी आया है _ Govind tumhare charn(M4A_1.m4a",
-    cover: "images/ram3.jpg"
-  },
-  {
-    id: 4,
-    title: "Daya Thodi Si Kar Do Na",
-    artist: "Khatu Shyam Bhajan",
-    duration: "7:30",
-    src: "songs/दया थोड़ी सी कर दो ना _ Khatu Shyam Bhajan 2021 _ Daya Thodi Si Kar Do Na by Nisha Dwivedi(M4A_128K).m4a",
-    cover: "images/ram4.jpg"
-  },
-  {
-    id: 5,
-    title: "Shri Ram Ki Gali Mein Tum Jana",
-    artist: "Ram Bhajan",
-    duration: "3:15",
-    src: "songs/श्री राम की गली में तुम जाना (Nachte Milenge Hanumana) Tanvi Senjaliya(M4A_128K).m4a",
-    cover: "images/ram5.jpg"
-  },
-  {
-    id: 6,
-    title: "Wahan Nachte Milenge Hanuman",
-    artist: "Hanuman Bhajan",
-    duration: "3:30",
-    src: "songs/वहाँ नाचते मिलेंगे हनुमान _ Wahan Nachte Milenge Hanuman _ Full Song _ with हिन्दी(M4A_1.m4a",
-    cover: "images/ram6.jpg"
-  },
-  {
-    id: 7,
-    title: "Shree Hanuman Chalisa",
-    artist: "Hariharan",
-    duration: "9:30",
-    src: "songs/श्री हनुमान चालिसा _ Shree Hanuman Chalisa _ Full Song _ with हिन्दी(M4A_1.m4a",
-    cover: "images/ram7.jpg"
-  },
-  {
-    id: 8,
-    title: "Sitaram Sitaram Kahiye",
-    artist: "Ram Bhajan",
-    duration: "5:45",
-    src: "songs/सिताराम सिताराम कहिये _ Sitaram Sitaram Kahiye _ Full Song _ with हिन्दी(M4A_1.m4a",
-    cover: "images/ram8.jpg"
-  }
+{
+  id: 1,
+  title: "Tum Hi Ho",
+  artist: "Arijit Singh",
+  duration: "4:27",
+  src: "_Tum Hi Ho_ Aashiqui 2 Full Song With Lyrics _ Aditya Roy Kapur_ Shraddha Kapoor(MP3_160K)(1).mp3",
+  cover: "aa.png"
+},
+{
+  id: 2,
+  title: "Ae Dil Hai Mushkil",
+  artist: "Arijit Singh",
+  duration: "5:00",
+  src: "Ae Dil Hai Mushkil Title SongI Official Lyric VideoI Karan Johar_ Aishwarya_ Ranbir_ Anushka_ Pritam(MP3_160K)(1).mp3",
+  cover: "ae dil.png"
+},
+{
+  id: 3,
+  title: "Agar Tum Saath Ho",
+  artist: "Alka Yagnik & Arijit Singh",
+  duration: "5:41",
+  src: "Agar Tum Saath Ho FULL AUDIO Song _ Tamasha _ Ranbir Kapoor_ Deepika Padukone _ T-Series(MP3_160K)(1).mp3",
+  cover: "agar tum.png"
+},
+{
+  id: 4,
+  title: "Samjhawan",
+  artist: "Arijit Singh & Shreya Ghoshal",
+  duration: "4:25",
+  src: "Arijit Singh_ Shreya Ghoshal - Samjhawan - Lyric video _ Alia B_ Varun D _ Humpty Sharma Ki Dulhania(MP3_160K)(1).mp3",
+  cover: "samjth.png"
+},
+{
+  id: 5,
+  title: "Chand Sifarish",
+  artist: "Shaan & Kailash Kher",
+  duration: "4:36",
+  src: "Chand Sifarish _ Full Song _ Fanaa _ Aamir Khan_ Kajol _ Shaan_ Kailash Kher _ Jatin-Lalit _ Prasoon(MP3_160K)(1).mp3",
+  cover: "chand.png"
+},
+{
+  id: 6,
+  title: "Channa Mereya",
+  artist: "Arijit Singh",
+  duration: "2:31",
+  src: "Channa Mereya -  Ae Dil Hai Mushkil _ Karan Johar _ Ranbir _ Anushka _ Pritam _ Arijit Singh(MP3_160K)(1).mp3",
+  cover: "channa.png"
+},
+{
+  id: 7,
+  title: "Galliyan",
+  artist: "Ankit Tiwari",
+  duration: "5:40",
+  src: "Ek Villain_ Galliyan Full Audio Song _ Ankit Tiwari _ Sidharth Malhotra _ Shraddha Kapoor(MP3_160K)(1).mp3",
+  cover: "galliyan.png"
+},
+{
+  id: 8,
+  title: "Guzarish",
+  artist: "Javed Ali & Sonu Nigam",
+  duration: "5:07",
+  src: "Full Video_ Guzarish _ Ghajini _ Aamir Khan_ Asin _ A.R. Rahman _ Javed Ali_ Sonu Nigam(MP3_160K)(1).mp3",
+  cover: "gazarish.png"
+},
+{
+  id: 9,
+  title: "Gerua",
+  artist: "Arijit Singh & Antara Mitra",
+  duration: "4:47",
+  src: "Gerua - Shah Rukh Khan _ Kajol _ Dilwale _ Pritam _ Arijit Singh _ Antara Mitra(MP3_160K)(1).mp3",
+  cover: "gerua.png"
+},
+{
+  id: 10,
+  title: "Billian Billian",
+  artist: "Guri",
+  duration: "3:17",
+  src: "Guri _ Billian Billian (Official Video) Sukhe _ Satti Dhillon _ Punjabi Song _ GK Digital _ Geet MP3(M4A_128K)(1).m4a",
+  cover: "billian billian.png"
+},
+{
+  id: 11,
+  title: "Jab Tak",
+  artist: "Armaan Malik",
+  duration: "2:25",
+  src: "JAB TAK Video Song _ M.S. DHONI -THE UNTOLD STORY _ Armaan Malik_ Amaal Mallik _Sushant Singh Rajput(MP3_160K)(1).mp3",
+  cover: "jab tak.png"
+},
+{
+  id: 12,
+  title: "Jattwaad",
+  artist: "Harf Cheema & Gurlez Akhtar",
+  duration: "3:37",
+  src: "Jattwaad _ Harf Cheema _ Gurlez Akhtar (Official Song) Punjabi Songs _ Punjabi Hit Song _ Geet MP3(M4A_128K)(1).m4a",
+  cover: "jattw.png"
+},
+{
+  id: 13,
+  title: "Kabhi Alvida Naa Kehna",
+  artist: "Sonu Nigam & Alka Yagnik",
+  duration: "6:43",
+  src: "Kabhi Alvida Naa Kehna Full Video - Shahrukh Khan_ Rani _ Preity _ Abhishek _ Alka Yagnik(MP3_160K)(1).mp3",
+  cover: "kabhi alvida.png"
+},
+{
+  id: 14,
+  title: "Kabhi Kabhie Mere Dil Mein",
+  artist: "Lata Mangeshkar",
+  duration: "4:39",
+  src: "Kabhi Kabhie Mere Dil Mein (Female) - Full Song _ Kabhi Kabhie _ Shashi _ Rakhee _ Lata Mangeshkar(MP3_160K)(1).mp3",
+  cover: "mera dil.png"
+},
+{
+  id: 15,
+  title: "Kaise Mujhe",
+  artist: "Benny Dayal & Shreya Ghoshal",
+  duration: "4:20",
+  src: "Kaise Mujhe [Full Song] - Ghajini(MP3_160K)(1).mp3",
+  cover: "kaise mujha.png"
+},
+{
+  id: 16,
+  title: "Kal Ho Naa Ho",
+  artist: "Sonu Nigam",
+  duration: "4:47",
+  src: "Kal Ho Naa Ho (Title Track) - Full Video _ Shah Rukh Khan_ Saif Ali Khan_ Preity Zinta _ Sonu Nigam(MP3_160K)(1).mp3",
+  cover: "kal ho.png"
+},
+{
+  id: 17,
+  title: "Kaun Tujhe",
+  artist: "Palak Muchhal",
+  duration: "4:01",
+  src: "KAUN TUJHE Full Audio Song _ M.S. DHONI -THE UNTOLD STORY _ Sushant Singh_ Disha Patani _ T- Series(MP3_160K)(1).mp3",
+  cover: "kaun tujha.png"
+},
+{
+  id: 18,
+  title: "Khuda Jaane",
+  artist: "KK & Shilpa Rao",
+  duration: "5:13",
+  src: "Khuda Jaane _ Full Song _ Bachna Ae Haseeno _ Ranbir Kapoor_ Deepika _ Vishal _ Shekhar_ KK_ Shilpa(MP3_160K)(1).mp3",
+  cover: "khuda.png"
+},
+{
+  id: 19,
+  title: "Do Pal",
+  artist: "Lata Mangeshkar & Sonu Nigam",
+  duration: "4:26",
+  src: "Lyrical_ Do Pal Song with Lyrics _ Veer-Zaara _ Shah Rukh Khan _ Preity Zinta _ Javed Akhtar(MP3_160K)(1).mp3",
+  cover: "do pal.png"
+},
+{
+  id: 20,
+  title: " Main Agar Kahoon",
+  artist: "Sonu Nigam & Shreya Ghoshal",
+  duration: "3:54",
+  src:"Main Agar Kahoon Full HD Video Song Om Shanti Om _ ShahRukh Khan(MP3_160K).mp3",
+  cover: "main agar.png"
+}
+,
+{
+  id: 21,
+  title: "Mill Lo Na",
+  artist: "Guri ft. Sukhe",
+  duration: "3:00",
+  src: "Mill Lo Na _ Guri Ft. Sukhe (Official Video) Jaani _ Satti Dhillon _ Punjabi Songs _ GK _ Geet MP3(M4A_128K).m4a",
+  cover: "mill lo.png"
+},
+{
+  id: 22,
+  title: "NIRA ISHQ",
+  artist: "Guri",
+  duration: "3:14",
+  src: "NIRA ISHQ _ GURI (Official Song) Satti Dhillon _ Romantic Song _ GK Digital _  Geet MP3(M4A_128K).m4a",
+  cover: "nira.png"
+},
+{
+  id: 23,
+  title: "O Re Piya",
+  artist: "Rahat Fateh Ali Khan",
+  duration: "11:52",
+  src: "O Re Piya Song _ Extended Version _ Aaja Nachle _ Madhuri Dixit_ Rahat Fateh Ali Khan_ Jaideep Sahni(MP3_160K).mp3",
+  cover: "o re.png"
+},
+{
+  id: 24,
+  title: "Pheli Nazar Mein Kaise Jaado Kar Diya",
+  artist: "Atif Aslam",
+  duration: "3:36",
+  src:"Pehli Nazar Mein Kaise Jaado Kar Diya _ Atif Aslam Hits _ Race I Akshaye_ Bipasha _ Saif Ali(MP3_160K).mp3",
+  cover: "pehli nazar.png"
+},
+{
+  id: 25,
+  title: "PHIR KABHI",
+  artist: "Arijit Singh",
+  duration: "4:47",
+  src:"PHIR KABHI- Full Song _ M.S. DHONI -THE UNTOLD STORY _ Arijit Singh _ Sushant Singh Disha Patani(MP3_160K).mp3",
+  cover: "phir kabhi.png"
+},
+{
+  id: 26,
+  title: "Phulkari",
+  artist: "Karan Randhawa & Simar Kaur",
+  duration: "3:24",
+  src: "Phulkari _ Karan Randhawa (Official Video) Simar Kaur _ Rav Dhillon _ GK Digital _ Geet MP3(M4A_128K).m4a",
+  cover: "phulkari.png"
+},
+{
+  id: 27,
+  title: "PRADA",
+  artist: "Jass Manak",
+  duration: "3:11",
+  src: "PRADA - JASS MANAK (Official Video) Satti Dhillon _ Latest Punjabi Song 2018 _ GK.DIGITAL _ Geet MP3(M4A_128K).m4a",
+  cover: "prada.png"
+},
+{
+  id: 28,
+  title: "Sunn Raha Hai Na Tu",
+  artist: "Ankit Tiwari",
+  duration: "6:30",
+  src: "Sunn Raha Hai Na Tu Aashiqui 2 Full Song With Lyrics _ Aditya Roy Kapur_ Shraddha Kapoor(MP3_160K).mp3",
+  cover: "sunn raha.png"
+},
+{
+  id: 29,
+  title: "Tere Liye",
+  artist: "Lata Mangeshkar & Roop Kumar Rathod",
+  duration: "5:34",
+  src:"Tere liye _ Song with Lyrics _ Veer-Zaara _ Shah Rukh Khan_ Preity Zinta _ Javed Akhtar_ Madan Mohan(MP3_160K).mp3",
+  cover: "tere liya.png"
+},
+{
+  id: 30,
+  title: "Teri Khair Mangdi",
+  artist: "Bilal Saeed",
+  duration: "2:57",
+  src: "Teri Khair Mangdi - Baar Baar Dekho _ Sidharth Malhotra _ Katrina Kaif _ Bilal Saeed(MP3_160K).mp3",
+  cover: "teri khair.png"
+},
+{
+  id: 31,
+  title: "Tujh Mein Rab Dikhta Hai",
+  artist: "Roop Kumar Rathod",
+  duration: "4:41",
+  src:"Tujh Mein Rab Dikhta Hai Song _ Rab Ne Bana Di Jodi _ Shah Rukh Khan_ Anushka Sharma _ Roop Kumar(MP3_160K).mp3",
+  cover: "tujh mein rab.png"
+},
+{
+  id: 32,
+  title: "Yaar Beli",
+  artist: "Guri",
+  duration: "3:46",
+  src: "Yaar Beli _ Guri (Official Video) Deep Jandu _ Parmish Verma _ Punjabi Song _ GK Digital _ Geet MP3(M4A_128K).m4a",
+  cover: "yaar belli.png"
+},
+{
+  id: 33,
+  title: "Yeh Fitoor Mera",
+  artist: "Arijit Singh",
+  duration: "4:50",
+  src: "Yeh Fitoor Mera - Full Song _ Fitoor _ Arijit Singh _ Aditya Roy Kapur_ Katrina Kaif _ Amit Trivedi(MP3_160K).mp3",
+  cover: "yeh fitoor.png"
+},
+{
+  id: 34,
+  title: "Aarambh Hai Prachand",
+  artist: "Piyush Mishra",
+  duration: "4:46",
+  src: "आरंभ है प्रचंड बोले मस्तको के झुंड _ Aarambh hai Prachand _ Full Song _ with हिन्दी(M4A_1).m4a",
+  cover: "aarambh.png"
+}
 ];
 
   /* ---------------------------------------------------------------
@@ -88,6 +297,7 @@
     isShuffle: false,
     repeatMode: 'off',        // off | all | one
     favorites: new Set(JSON.parse(localStorage.getItem('wax-favorites') || '[]')),
+    recentlyPlayed: JSON.parse(localStorage.getItem('recentlyPlayed') || '[]'),
     activeTab: 'all',         // all | favorites
     query: '',
     shuffleHistory: [],       // played order, for sensible "previous" while shuffling
@@ -150,6 +360,28 @@
       const inTab = state.activeTab === 'all' || state.favorites.has(s.id);
       const matchesQuery = !q || s.title.toLowerCase().includes(q) || s.artist.toLowerCase().includes(q);
       return inTab && matchesQuery;
+    });
+  }
+
+  function renderRecentSongs(){
+    const recentList = document.getElementById('recentList');
+    if (!recentList) return;
+
+    recentList.innerHTML = '';
+    const ids = Array.isArray(state.recentlyPlayed) ? state.recentlyPlayed : [];
+
+    ids.forEach((id) => {
+      const song = getSong(id);
+      if (!song) return;
+
+      const li = document.createElement('li');
+      li.className = 'recent-item';
+      li.innerHTML = `
+        <span>${song.title}</span>
+        <small>${song.artist}</small>
+      `;
+      li.addEventListener('click', () => loadSong(song.id, true));
+      recentList.appendChild(li);
     });
   }
 
@@ -230,7 +462,20 @@
     if (!song) return;
     state.currentId = id;
 
-    audio.src = song.src;
+    state.recentlyPlayed = [
+      id,
+      ...(Array.isArray(state.recentlyPlayed) ? state.recentlyPlayed : []).filter((songId) => songId !== id)
+    ].slice(0, 5);
+
+    localStorage.setItem('recentlyPlayed', JSON.stringify(state.recentlyPlayed));
+    renderRecentSongs();
+
+    const normalizedSrc = song.src.replace(/\(1\)\.(mp3|m4a)$/i, '.$1');
+    audio.pause();
+    audio.currentTime = 0;
+    audio.src = normalizedSrc;
+    audio.load();
+
     albumArt.src = song.cover;
     albumArt.alt = `${song.title} cover`;
     songTitle.textContent = song.title;
@@ -264,7 +509,8 @@
     playBtn.setAttribute('aria-label', state.isPlaying ? 'Pause' : 'Play');
     vinyl.classList.toggle('spinning', state.isPlaying);
     tonearm.classList.toggle('playing', state.isPlaying);
-    renderList(); // refresh playing-bars indicator
+    renderList();
+    renderRecentSongs();
   }
 
   playBtn.addEventListener('click', () => (state.isPlaying ? pause() : play()));
@@ -442,4 +688,5 @@
   setVolume(savedVolume);
   loadSong(state.currentId, false);
   renderList();
+  renderRecentSongs();
 })();
