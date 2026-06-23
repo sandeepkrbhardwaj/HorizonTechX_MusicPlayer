@@ -470,7 +470,7 @@
     localStorage.setItem('recentlyPlayed', JSON.stringify(state.recentlyPlayed));
     renderRecentSongs();
 
-    const normalizedSrc = song.src.replace(/\(1\)\.(mp3|m4a)$/i, '.$1');
+ 
     audio.pause();
     audio.currentTime = 0;
     audio.src = normalizedSrc;
