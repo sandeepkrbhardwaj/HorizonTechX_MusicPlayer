@@ -283,7 +283,7 @@
   title: "Aarambh Hai Prachand",
   artist: "Piyush Mishra",
   duration: "4:46",
-  src: "आरंभ है प्रचंड बोले मस्तको के झुंड _ Aarambh hai Prachand _ Full Song _ with हिन्दी(M4A_1.m4a",
+  src: "आरंभ है प्रचंड बोले मस्तको के झुंड _ Aarambh hai Prachand _ Full Song _ with हिन्दी(M4A_1.m4as",
   cover: "aarambh.png"
 }
 ];
