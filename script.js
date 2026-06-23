@@ -18,7 +18,7 @@
   title: "Tum Hi Ho",
   artist: "Arijit Singh",
   duration: "4:27",
-  src: "_Tum Hi Ho_ Aashiqui 2 Full Song With Lyrics _ Aditya Roy Kapur_ Shraddha Kapoor(MP3_160K)(1).mp3",
+  src: "_Tum Hi Ho_ Aashiqui 2 Full Song With Lyrics _ Aditya Roy Kapur_ Shraddha Kapoor(MP3_160K).mp3",
   cover: "aa.png"
 },
 {
@@ -283,7 +283,7 @@
   title: "Aarambh Hai Prachand",
   artist: "Piyush Mishra",
   duration: "4:46",
-  src: "आरंभ है प्रचंड बोले मस्तको के झुंड _ Aarambh hai Prachand _ Full Song _ with हिन्दी(M4A_1).m4a",
+  src: "आरंभ है प्रचंड बोले मस्तको के झुंड _ Aarambh hai Prachand _ Full Song _ with हिन्दी(M4A_1.m4a",
   cover: "aarambh.png"
 }
 ];
