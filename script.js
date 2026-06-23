@@ -18,7 +18,7 @@
   title: "Tum Hi Ho",
   artist: "Arijit Singh",
   duration: "4:27",
-  src: "_Tum Hi Ho_ Aashiqui 2 Full Song With Lyrics _ Aditya Roy Kapur_ Shraddha Kapoor(MP3_160K)(1).mp3",
+  src: "_Tum Hi Ho_ Aashiqui 2 Full Song With Lyrics _ Aditya Roy Kapur_ Shraddha Kapoor(MP3_160K).mp3",
   cover: "aa.png"
 },
 {
@@ -26,7 +26,7 @@
   title: "Ae Dil Hai Mushkil",
   artist: "Arijit Singh",
   duration: "5:00",
-  src: "Ae Dil Hai Mushkil Title SongI Official Lyric VideoI Karan Johar_ Aishwarya_ Ranbir_ Anushka_ Pritam(MP3_160K)(1).mp3",
+  src: "Ae Dil Hai Mushkil Title SongI Official Lyric VideoI Karan Johar_ Aishwarya_ Ranbir_ Anushka_ Pritam(MP3_160K).mp3",
   cover: "ae dil.png"
 },
 {
