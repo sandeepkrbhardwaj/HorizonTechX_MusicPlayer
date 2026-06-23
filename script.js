@@ -18,7 +18,7 @@
   title: "Tum Hi Ho",
   artist: "Arijit Singh",
   duration: "4:27",
-  src: "_Tum Hi Ho_ Aashiqui 2 Full Song With Lyrics _ Aditya Roy Kapur_ Shraddha Kapoor(MP3_160K).mp3",
+  src: "_Tum Hi Ho_ Aashiqui 2 Full Song With Lyrics _ Aditya Roy Kapur_ Shraddha Kapoor(MP3_160K)(1).mp3",
   cover: "aa.png"
 },
 {
@@ -26,7 +26,7 @@
   title: "Ae Dil Hai Mushkil",
   artist: "Arijit Singh",
   duration: "5:00",
-  src: "Ae Dil Hai Mushkil Title SongI Official Lyric VideoI Karan Johar_ Aishwarya_ Ranbir_ Anushka_ Pritam(MP3_160K).mp3",
+  src: "Ae Dil Hai Mushkil Title SongI Official Lyric VideoI Karan Johar_ Aishwarya_ Ranbir_ Anushka_ Pritam(MP3_160K)(1).mp3",
   cover: "ae dil.png"
 },
 {
@@ -364,8 +364,9 @@
   }
 
   function renderRecentSongs(){
+    // #recentList is optional — only render if the element exists in the DOM
     const recentList = document.getElementById('recentList');
-    if (!recentList) return;
+    if (!recentList) return; // silently skip; no crash
 
     recentList.innerHTML = '';
     const ids = Array.isArray(state.recentlyPlayed) ? state.recentlyPlayed : [];
@@ -470,11 +471,10 @@
     localStorage.setItem('recentlyPlayed', JSON.stringify(state.recentlyPlayed));
     renderRecentSongs();
 
- 
     audio.pause();
     audio.currentTime = 0;
-    audio.src = normalizedSrc;
-    audio.load();
+    audio.src = song.src;  // use filename exactly as defined in SONGS array
+    try { audio.load(); } catch(e) { console.warn('audio.load() failed:', e); }
 
     albumArt.src = song.cover;
     albumArt.alt = `${song.title} cover`;
@@ -583,6 +583,16 @@
   // Buffering feedback
   audio.addEventListener('waiting', () => playBtn.style.opacity = '.6');
   audio.addEventListener('canplay', () => playBtn.style.opacity = '1');
+
+  // Audio load error — show helpful message instead of silently breaking
+  audio.addEventListener('error', () => {
+    const song = currentSong();
+    if (song) {
+      showToast(`⚠️ Could not load "${song.title}" — check the audio file is in the same folder.`);
+    }
+    state.isPlaying = false;
+    updatePlayUI();
+  });
 
   /* ---------------------------------------------------------------
      8. VOLUME
