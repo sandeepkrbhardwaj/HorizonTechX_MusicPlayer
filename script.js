@@ -13,14 +13,7 @@
      song gets a unique, stable piece of "album art".
   --------------------------------------------------------------- */
   const SONGS = [
-{
-  id: 1,
-  title: "Tum Hi Ho",
-  artist: "Arijit Singh",
-  duration: "4:27",
-  src: "_Tum Hi Ho_ Aashiqui 2 Full Song With Lyrics _ Aditya Roy Kapur_ Shraddha Kapoor(MP3_160K).mp3",
-  cover: "aa.png"
-},
+
 {
   id: 2,
   title: "Ae Dil Hai Mushkil",
@@ -277,14 +270,6 @@
   duration: "4:50",
   src: "Yeh Fitoor Mera - Full Song _ Fitoor _ Arijit Singh _ Aditya Roy Kapur_ Katrina Kaif _ Amit Trivedi(MP3_160K).mp3",
   cover: "yeh fitoor.png"
-},
-{
-  id: 34,
-  title: "Aarambh Hai Prachand",
-  artist: "Piyush Mishra",
-  duration: "4:46",
-  src: "आरंभ है प्रचंड बोले मस्तको के झुंड _ Aarambh hai Prachand _ Full Song _ with हिन्दी(M4A_1.m4as",
-  cover: "aarambh.png"
 }
 ];
 
