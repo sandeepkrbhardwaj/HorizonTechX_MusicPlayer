@@ -1,17 +1,4 @@
-/* ===================================================================
-   WAX — Glass Turntable Music Player
-   Vanilla JS, ES6+. No frameworks, no build step.
-   =================================================================== */
 
-(() => {
-  'use strict';
-
-  /* ---------------------------------------------------------------
-     1. DATA — sample playlist
-     Audio: royalty-free demo tracks from SoundHelix (commonly used
-     as placeholder audio). Covers: seeded Picsum images so every
-     song gets a unique, stable piece of "album art".
-  --------------------------------------------------------------- */
   const SONGS = [
 
 {
@@ -273,9 +260,8 @@
 }
 ];
 
-  /* ---------------------------------------------------------------
-     2. STATE
-  --------------------------------------------------------------- */
+
+
   const state = {
     currentId: SONGS[0].id,
     isPlaying: false,
