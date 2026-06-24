@@ -14,19 +14,11 @@
   --------------------------------------------------------------- */
   const SONGS = [
 {
-  id: 1,
-  title: "Tum Hi Ho",
-  artist: "Arijit Singh",
-  duration: "4:27",
-  src: "_Tum Hi Ho_ Aashiqui 2 Full Song With Lyrics _ Aditya Roy Kapur_ Shraddha Kapoor(MP3_160K)(1).mp3",
-  cover: "aa.png"
-},
-{
   id: 2,
   title: "Ae Dil Hai Mushkil",
   artist: "Arijit Singh",
   duration: "5:00",
-  src: "Ae Dil Hai Mushkil Title SongI Official Lyric VideoI Karan Johar_ Aishwarya_ Ranbir_ Anushka_ Pritam(MP3_160K)(1).mp3",
+  src: "Ae Dil Hai Mushkil Title SongI Official Lyric VideoI Karan Johar_ Aishwarya_ Ranbir_ Anushka_ Pritam(MP3_160K).mp3",
   cover: "ae dil.png"
 },
 {
@@ -34,7 +26,7 @@
   title: "Agar Tum Saath Ho",
   artist: "Alka Yagnik & Arijit Singh",
   duration: "5:41",
-  src: "Agar Tum Saath Ho FULL AUDIO Song _ Tamasha _ Ranbir Kapoor_ Deepika Padukone _ T-Series(MP3_160K)(1).mp3",
+  src: "Agar Tum Saath Ho FULL AUDIO Song _ Tamasha _ Ranbir Kapoor_ Deepika Padukone _ T-Series(MP3_160K).mp3",
   cover: "agar tum.png"
 },
 {
@@ -42,7 +34,7 @@
   title: "Samjhawan",
   artist: "Arijit Singh & Shreya Ghoshal",
   duration: "4:25",
-  src: "Arijit Singh_ Shreya Ghoshal - Samjhawan - Lyric video _ Alia B_ Varun D _ Humpty Sharma Ki Dulhania(MP3_160K)(1).mp3",
+  src: "Arijit Singh_ Shreya Ghoshal - Samjhawan - Lyric video _ Alia B_ Varun D _ Humpty Sharma Ki Dulhania(MP3_160K).mp3",
   cover: "samjth.png"
 },
 {
@@ -50,7 +42,7 @@
   title: "Chand Sifarish",
   artist: "Shaan & Kailash Kher",
   duration: "4:36",
-  src: "Chand Sifarish _ Full Song _ Fanaa _ Aamir Khan_ Kajol _ Shaan_ Kailash Kher _ Jatin-Lalit _ Prasoon(MP3_160K)(1).mp3",
+  src: "Chand Sifarish _ Full Song _ Fanaa _ Aamir Khan_ Kajol _ Shaan_ Kailash Kher _ Jatin-Lalit _ Prasoon(MP3_160K).mp3",
   cover: "chand.png"
 },
 {
@@ -58,7 +50,7 @@
   title: "Channa Mereya",
   artist: "Arijit Singh",
   duration: "2:31",
-  src: "Channa Mereya -  Ae Dil Hai Mushkil _ Karan Johar _ Ranbir _ Anushka _ Pritam _ Arijit Singh(MP3_160K)(1).mp3",
+  src: "Channa Mereya -  Ae Dil Hai Mushkil _ Karan Johar _ Ranbir _ Anushka _ Pritam _ Arijit Singh(MP3_160K).mp3",
   cover: "channa.png"
 },
 {
@@ -66,7 +58,7 @@
   title: "Galliyan",
   artist: "Ankit Tiwari",
   duration: "5:40",
-  src: "Ek Villain_ Galliyan Full Audio Song _ Ankit Tiwari _ Sidharth Malhotra _ Shraddha Kapoor(MP3_160K)(1).mp3",
+  src: "Ek Villain_ Galliyan Full Audio Song _ Ankit Tiwari _ Sidharth Malhotra _ Shraddha Kapoor(MP3_160K).mp3",
   cover: "galliyan.png"
 },
 {
@@ -74,7 +66,7 @@
   title: "Guzarish",
   artist: "Javed Ali & Sonu Nigam",
   duration: "5:07",
-  src: "Full Video_ Guzarish _ Ghajini _ Aamir Khan_ Asin _ A.R. Rahman _ Javed Ali_ Sonu Nigam(MP3_160K)(1).mp3",
+  src: "Full Video_ Guzarish _ Ghajini _ Aamir Khan_ Asin _ A.R. Rahman _ Javed Ali_ Sonu Nigam(MP3_160K).mp3",
   cover: "gazarish.png"
 },
 {
@@ -82,7 +74,7 @@
   title: "Gerua",
   artist: "Arijit Singh & Antara Mitra",
   duration: "4:47",
-  src: "Gerua - Shah Rukh Khan _ Kajol _ Dilwale _ Pritam _ Arijit Singh _ Antara Mitra(MP3_160K)(1).mp3",
+  src: "Gerua - Shah Rukh Khan _ Kajol _ Dilwale _ Pritam _ Arijit Singh _ Antara Mitra(MP3_160K).mp3",
   cover: "gerua.png"
 },
 {
@@ -90,7 +82,7 @@
   title: "Billian Billian",
   artist: "Guri",
   duration: "3:17",
-  src: "Guri _ Billian Billian (Official Video) Sukhe _ Satti Dhillon _ Punjabi Song _ GK Digital _ Geet MP3(M4A_128K)(1).m4a",
+  src: "Guri _ Billian Billian (Official Video) Sukhe _ Satti Dhillon _ Punjabi Song _ GK Digital _ Geet MP3(M4A_128K).m4a",
   cover: "billian billian.png"
 },
 {
@@ -98,7 +90,7 @@
   title: "Jab Tak",
   artist: "Armaan Malik",
   duration: "2:25",
-  src: "JAB TAK Video Song _ M.S. DHONI -THE UNTOLD STORY _ Armaan Malik_ Amaal Mallik _Sushant Singh Rajput(MP3_160K)(1).mp3",
+  src: "JAB TAK Video Song _ M.S. DHONI -THE UNTOLD STORY _ Armaan Malik_ Amaal Mallik _Sushant Singh Rajput(MP3_160K).mp3",
   cover: "jab tak.png"
 },
 {
@@ -106,7 +98,7 @@
   title: "Jattwaad",
   artist: "Harf Cheema & Gurlez Akhtar",
   duration: "3:37",
-  src: "Jattwaad _ Harf Cheema _ Gurlez Akhtar (Official Song) Punjabi Songs _ Punjabi Hit Song _ Geet MP3(M4A_128K)(1).m4a",
+  src: "Jattwaad _ Harf Cheema _ Gurlez Akhtar (Official Song) Punjabi Songs _ Punjabi Hit Song _ Geet MP3(M4A_128K).m4a",
   cover: "jattw.png"
 },
 {
@@ -114,7 +106,7 @@
   title: "Kabhi Alvida Naa Kehna",
   artist: "Sonu Nigam & Alka Yagnik",
   duration: "6:43",
-  src: "Kabhi Alvida Naa Kehna Full Video - Shahrukh Khan_ Rani _ Preity _ Abhishek _ Alka Yagnik(MP3_160K)(1).mp3",
+  src: "Kabhi Alvida Naa Kehna Full Video - Shahrukh Khan_ Rani _ Preity _ Abhishek _ Alka Yagnik(MP3_160K).mp3",
   cover: "kabhi alvida.png"
 },
 {
@@ -122,7 +114,7 @@
   title: "Kabhi Kabhie Mere Dil Mein",
   artist: "Lata Mangeshkar",
   duration: "4:39",
-  src: "Kabhi Kabhie Mere Dil Mein (Female) - Full Song _ Kabhi Kabhie _ Shashi _ Rakhee _ Lata Mangeshkar(MP3_160K)(1).mp3",
+  src: "Kabhi Kabhie Mere Dil Mein (Female) - Full Song _ Kabhi Kabhie _ Shashi _ Rakhee _ Lata Mangeshkar(MP3_160K).mp3",
   cover: "mera dil.png"
 },
 {
@@ -130,7 +122,7 @@
   title: "Kaise Mujhe",
   artist: "Benny Dayal & Shreya Ghoshal",
   duration: "4:20",
-  src: "Kaise Mujhe [Full Song] - Ghajini(MP3_160K)(1).mp3",
+  src: "Kaise Mujhe [Full Song] - Ghajini(MP3_160K).mp3",
   cover: "kaise mujha.png"
 },
 {
@@ -138,7 +130,7 @@
   title: "Kal Ho Naa Ho",
   artist: "Sonu Nigam",
   duration: "4:47",
-  src: "Kal Ho Naa Ho (Title Track) - Full Video _ Shah Rukh Khan_ Saif Ali Khan_ Preity Zinta _ Sonu Nigam(MP3_160K)(1).mp3",
+  src: "Kal Ho Naa Ho (Title Track) - Full Video _ Shah Rukh Khan_ Saif Ali Khan_ Preity Zinta _ Sonu Nigam(MP3_160K).mp3",
   cover: "kal ho.png"
 },
 {
@@ -146,7 +138,7 @@
   title: "Kaun Tujhe",
   artist: "Palak Muchhal",
   duration: "4:01",
-  src: "KAUN TUJHE Full Audio Song _ M.S. DHONI -THE UNTOLD STORY _ Sushant Singh_ Disha Patani _ T- Series(MP3_160K)(1).mp3",
+  src: "KAUN TUJHE Full Audio Song _ M.S. DHONI -THE UNTOLD STORY _ Sushant Singh_ Disha Patani _ T- Series(MP3_160K).mp3",
   cover: "kaun tujha.png"
 },
 {
@@ -154,7 +146,7 @@
   title: "Khuda Jaane",
   artist: "KK & Shilpa Rao",
   duration: "5:13",
-  src: "Khuda Jaane _ Full Song _ Bachna Ae Haseeno _ Ranbir Kapoor_ Deepika _ Vishal _ Shekhar_ KK_ Shilpa(MP3_160K)(1).mp3",
+  src: "Khuda Jaane _ Full Song _ Bachna Ae Haseeno _ Ranbir Kapoor_ Deepika _ Vishal _ Shekhar_ KK_ Shilpa(MP3_160K).mp3",
   cover: "khuda.png"
 },
 {
@@ -162,7 +154,7 @@
   title: "Do Pal",
   artist: "Lata Mangeshkar & Sonu Nigam",
   duration: "4:26",
-  src: "Lyrical_ Do Pal Song with Lyrics _ Veer-Zaara _ Shah Rukh Khan _ Preity Zinta _ Javed Akhtar(MP3_160K)(1).mp3",
+  src: "Lyrical_ Do Pal Song with Lyrics _ Veer-Zaara _ Shah Rukh Khan _ Preity Zinta _ Javed Akhtar(MP3_160K).mp3",
   cover: "do pal.png"
 },
 {
@@ -283,7 +275,7 @@
   title: "Aarambh Hai Prachand",
   artist: "Piyush Mishra",
   duration: "4:46",
-  src: "आरंभ है प्रचंड बोले मस्तको के झुंड _ Aarambh hai Prachand _ Full Song _ with हिन्दी(M4A_1).m4a",
+  src: "आरंभ है प्रचंड बोले मस्तको के झुंड _ Aarambh hai Prachand _ Full Song _ with हिन्दी(M4A_1.m4a",
   cover: "aarambh.png"
 }
 ];
